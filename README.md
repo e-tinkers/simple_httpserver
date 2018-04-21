@@ -9,4 +9,4 @@ There are two example codes provided in this repository:
 
 For more details about the codes, refer to my blog post [How to control Raspberry Pi via http web server](https://www.e-tinkers.com/2018/04/how-to-control-raspberry-pi-gpio-via-http-web-server/).
 
-[[embed url=https://www.youtube.com/embed/SRf6HW_b3EE]]
+[embed url=https://www.youtube.com/embed/SRf6HW_b3EE]
