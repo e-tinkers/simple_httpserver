@@ -9,4 +9,8 @@ There are two example codes provided in this repository:
 
 For more details about the codes, refer to my blog post [How to control Raspberry Pi via http web server](https://www.e-tinkers.com/2018/04/how-to-control-raspberry-pi-gpio-via-http-web-server/).
 
+{::nomarkdown}
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SRf6HW_b3EE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+{:/}
