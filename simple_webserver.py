@@ -34,7 +34,7 @@ class MyServer(BaseHTTPRequestHandler):
            <html>
            <body style="width:960px; margin: 20px auto;">
            <h1>Welcome to my Raspberry Pi</h1>
-           <p>Current CPU temperature is {}</p>
+           <p>Current GPU temperature is {}</p>
            <form action="/" method="POST">
                Turn LED :
                <input type="submit" name="submit" value="On">
