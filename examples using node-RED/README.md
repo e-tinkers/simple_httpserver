@@ -24,4 +24,6 @@ The dashboard can be accessed via http://your-rpi-ip:1880/ui, the ui path be def
 
 Scroll down to find the line `//ui: { path: "ui" }` and uncomment out the line by deleting the // in front of the line. Pressed ctrl-x to save the file.
 
+[![](https://github.com/e-tinkers/simple_httpserver/blob/master/examples%20using%20node-RED/images/simple_GPIO_dashboard.png)](https://github.com/e-tinkers/simple_httpserver/blob/master/examples%20using%20node-RED/images/simple_GPIO_dashboard.png)
+
 For more details about the codes, refer to my blog post [Control Raspberry Pi using Node-RED](https://www.e-tinkers.com/2019/02/control-raspberry-pi-gpio-using-node-red/).
