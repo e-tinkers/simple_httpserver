@@ -9,3 +9,6 @@ In the `simple_webserver2.py` example, it deomonstrates how to handle multiple G
 For more details about the codes, refer to my blog post [How to control Raspberry Pi via http web server](https://www.e-tinkers.com/2018/04/how-to-control-raspberry-pi-gpio-via-http-web-server/).
 
 [YouTube demostration](https://youtu.be/SRf6HW_b3EE)
+
+### Alternative - Using Node-RED
+[Update - Feb, 2019] When I wrote this python code and the article almost a year ago, I never expect the article became one of the most popular posts on my blog. The reason that I wrote this code was to demonstrate that you probably don't need to install a web framework and a full feature web server, especially if you are new into programming. But this may probably not scalable for complex GPIO project, for that, you probably need a proper web framework, or alternatively, for those came from hardware background or new to programming, you should look into the examples on using node-RED which achieve the same result with almost no programming required.
