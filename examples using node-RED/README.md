@@ -6,11 +6,11 @@ Here are two node-RED flows for controling GPIO and provide the same functionali
 
 The `simple-GPIO-flow.json` allows user to read the Raspberry Pi GPU temperature and control the LED that is cnnected to GPIO18 via node-RED Editor.
 
-[![](https://github.com/e-tinkers/simple_httpserver/examples-using-node-red/images/simple_gpio_flow.png)](https://github.com/e-tinkers/simple_httpserver/examples-using-node-red/images/simple_gpio_flow.png)
+[![](https://github.com/e-tinkers/simple_httpserver/blob/master/examples%20using%20node-RED/images/simple_gpio_flow.png)](https://github.com/e-tinkers/simple_httpserver/blob/master/examples%20using%20node-RED/images/simple_gpio_flow.png)
 
 ### Control GPIO via node-RED dashboard
 
-[![](https://github.com/e-tinkers/simple_httpserver/examples-using-node-red/images/simple_gpio_dashboard.png)](https://github.com/e-tinkers/simple_httpserver/examples-using-node-red/images/simple_gpio_dashboard.png)
+[![](https://github.com/e-tinkers/simple_httpserver/blob/master/examples%20using%20node-RED/images/simple_gpio_dashboard_flow.png)](https://github.com/e-tinkers/simple_httpserver/blob/master/examples%20using%20node-RED/images/simple_gpio_dashboard_flow.png)
 
 The `simple-GPIO-dashboard.json` allows user to control via node-RED dashboard. Node-RED dashboad by default is not instaled on Raspberry Pi, to install it.
 
