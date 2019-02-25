@@ -1,0 +1,156 @@
+[
+    {
+        "id": "4398c3ca.6d967c",
+        "type": "tab",
+        "label": "Simple-GPIO-Dashboard",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "f423e802.e771a8",
+        "type": "rpi-gpio out",
+        "z": "4398c3ca.6d967c",
+        "name": "",
+        "pin": "12",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 330,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "7620e0e5.7684f8",
+        "type": "ui_switch",
+        "z": "4398c3ca.6d967c",
+        "name": "",
+        "label": "Toggle LED (GPIO18)",
+        "tooltip": "",
+        "group": "820dee1c.f56198",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 120,
+        "y": 220,
+        "wires": [
+            [
+                "f423e802.e771a8"
+            ]
+        ]
+    },
+    {
+        "id": "954563df.b70fd",
+        "type": "ui_gauge",
+        "z": "4398c3ca.6d967c",
+        "name": "",
+        "group": "820dee1c.f56198",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "GPU Temperature",
+        "label": "Degree C",
+        "format": "{{value}}",
+        "min": "30",
+        "max": "80",
+        "colors": [
+            "#00B500",
+            "#E6E600",
+            "#CA3838"
+        ],
+        "seg1": "55",
+        "seg2": "65",
+        "x": 570,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "9e03940b.ed386",
+        "type": "exec",
+        "z": "4398c3ca.6d967c",
+        "command": "/opt/vc/bin/vcgencmd",
+        "addpay": true,
+        "append": "measure_temp",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "Read GPU Temperature",
+        "x": 310,
+        "y": 140,
+        "wires": [
+            [
+                "7509f56f.aa9de4"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "12590067.cac2c8",
+        "type": "inject",
+        "z": "4398c3ca.6d967c",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "x": 110,
+        "y": 140,
+        "wires": [
+            [
+                "9e03940b.ed386"
+            ]
+        ]
+    },
+    {
+        "id": "7509f56f.aa9de4",
+        "type": "function",
+        "z": "4398c3ca.6d967c",
+        "name": "Parse Temp",
+        "func": "const value = msg.payload.match(/(\\d+|\\d+\\.\\d+)'/)[1];\nmsg.value = value;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 530,
+        "y": 121,
+        "wires": [
+            [
+                "954563df.b70fd"
+            ]
+        ]
+    },
+    {
+        "id": "820dee1c.f56198",
+        "type": "ui_group",
+        "z": "",
+        "name": "MyDashBoard",
+        "tab": "a667dc25.1c32e8",
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "a667dc25.1c32e8",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Dashboard",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]

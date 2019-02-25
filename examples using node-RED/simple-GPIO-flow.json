@@ -1,0 +1,136 @@
+[
+    {
+        "id": "1befe522.34afb3",
+        "type": "tab",
+        "label": "Simple-GPIO-flow",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "87eaf3b0.83ca78",
+        "type": "rpi-gpio out",
+        "z": "1befe522.34afb3",
+        "name": "",
+        "pin": "12",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 360,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "88fbf591.5c5878",
+        "type": "inject",
+        "z": "1befe522.34afb3",
+        "name": "",
+        "topic": "Turn On LED",
+        "payload": "1",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "87eaf3b0.83ca78"
+            ]
+        ]
+    },
+    {
+        "id": "c20eddba.c725d8",
+        "type": "inject",
+        "z": "1befe522.34afb3",
+        "name": "",
+        "topic": "Turn Off LED",
+        "payload": "0",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 140,
+        "y": 200,
+        "wires": [
+            [
+                "87eaf3b0.83ca78"
+            ]
+        ]
+    },
+    {
+        "id": "e6567828.f92888",
+        "type": "debug",
+        "z": "1befe522.34afb3",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 570,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "85d37ef3.0999e8",
+        "type": "inject",
+        "z": "1befe522.34afb3",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "x": 130,
+        "y": 60,
+        "wires": [
+            [
+                "92cc17a0.5ed41"
+            ]
+        ]
+    },
+    {
+        "id": "92cc17a0.5ed41",
+        "type": "exec",
+        "z": "1befe522.34afb3",
+        "command": "/opt/vc/bin/vcgencmd",
+        "addpay": true,
+        "append": "measure_temp",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "Read GPU Temperature",
+        "x": 350,
+        "y": 60,
+        "wires": [
+            [
+                "e6567828.f92888"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "eafa2441.444c9",
+        "type": "inject",
+        "z": "1befe522.34afb3",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 80,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    }
+]
